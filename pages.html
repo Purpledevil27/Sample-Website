@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <title>Admin Area | Pages</title>
+
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+    </style>
+    <!-- Custom styles for this template -->
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
+      integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ"
+      crossorigin="anonymous"
+    />
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="https://cdn.ckeditor.com/4.13.0/standard/ckeditor.js"></script>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+      <a class="navbar-brand" href="#">Adminstrap</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarsExampleDefault"
+        aria-controls="navbarsExampleDefault"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html"
+              >Dashboard <span class="sr-only">(current)</span></a
+            >
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="pages.html">Pages</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="posts.html">Posts</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="users.html">Users</a>
+          </li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Welcome, Rahul </a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="login.html">Logout</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <header id="header">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-10">
+            <h1>
+              <span class="fas fa-clipboard" aria-hidden="true"></span>
+              Pages <small>Manage site pages</small>
+            </h1>
+          </div>
+          <div class="col-md-2">
+            <div class="dropdown create">
+              <button
+                class="btn btn-secondary dropdown-toggle"
+                type="button"
+                id="dropdownMenuButton"
+                data-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false"
+              >
+                Create Content
+              </button>
+              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <a
+                  class="dropdown-item"
+                  type="button"
+                  data-toggle="modal"
+                  data-target="#addPage"
+                  >Add page</a
+                >
+                <a class="dropdown-item" href="#">Add post</a>
+                <a class="dropdown-item" href="#">Add user</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <section id="breadcrump">
+      <div class="container">
+        <ol class="breadcrump">
+          <li><a href="index.html">Dashboard</a></li>
+          <li class="active">Pages</li>
+        </ol>
+      </div>
+    </section>
+
+    <section id="main">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-3">
+            <div class="list-group">
+              <a
+                href="index.html"
+                class="list-group-item list-group-item-action active main"
+                ><span class="fas fa-clipboard" aria-hidden="true"></span>
+                Dashboard
+              </a>
+              <a href="#" class="list-group-item list-group-item-action"
+                ><span class="fas fa-file" aria-hidden="true"></span> Pages<span
+                  class="badge badge-light"
+                  >12</span
+                ></a
+              >
+              <a href="#" class="list-group-item list-group-item-action">
+                <i class="fas fa-pen" aria-hidden="true"></i> Posts<span
+                  class="badge badge-light"
+                  >33</span
+                ></a
+              >
+              <a href="#" class="list-group-item list-group-item-action"
+                ><span class="fas fa-user" aria-hidden="true"></span> Users<span
+                  class="badge badge-light"
+                  >11</span
+                ></a
+              >
+            </div>
+            <br />
+            <div class="card">
+              <h4>Disk Space Used</h4>
+              <div class="progress">
+                <div
+                  class="progress-bar progress-bar-striped progress-bar-animated"
+                  role="progressbar"
+                  style="width: 40%;"
+                  aria-valuenow="40"
+                  aria-valuemin="0"
+                  aria-valuemax="100"
+                >
+                  40%
+                </div>
+              </div>
+              <h4>Bandwidth Used</h4>
+              <div class="progress">
+                <div
+                  class="progress-bar progress-bar-striped progress-bar-animated"
+                  role="progressbar"
+                  style="width: 60%;"
+                  aria-valuenow="60"
+                  aria-valuemin="0"
+                  aria-valuemax="100"
+                >
+                  60%
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Website Overview-->
+          <div class="col-md-9">
+            <div class="card">
+              <div class="card-header main-color-bg">Pages</div>
+              <div class="row">
+                <div class="col-md-12">
+                  <input
+                    class="form-control"
+                    type="text"
+                    placeholder="Filter Pages"
+                  />
+                </div>
+              </div>
+              <br />
+              <table class="table table-striped table-hover">
+                <tr>
+                  <th>Title</th>
+                  <th>Published</th>
+                  <th>Created</th>
+                  <th></th>
+                </tr>
+                <tr>
+                  <td>Home</td>
+                  <td><span class="fas fa-check" aria-hidden="true"></span></td>
+                  <td>Dec 12,2018</td>
+                  <td>
+                    <a class="btn btn-default" href="edit.html" target="_blank"
+                      >Edit</a
+                    >
+                    <a class="btn btn-danger" href="#">Delete</a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>About</td>
+                  <td><span class="fas fa-check" aria-hidden="true"></span></td>
+                  <td>Dec 13,2018</td>
+                  <td>
+                    <a class="btn btn-default" href="edit.html" target="_blank"
+                      >Edit</a
+                    >
+                    <a class="btn btn-danger" href="#">Delete</a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Services</td>
+                  <td><span class="fas fa-times" aria-hidden="true"></span></td>
+                  <td>Dec 13,2018</td>
+                  <td>
+                    <a class="btn btn-default" href="edit.html" target="_blank"
+                      >Edit</a
+                    >
+                    <a class="btn btn-danger" href="#">Delete</a>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Contact</td>
+                  <td><span class="fas fa-check" aria-hidden="true"></span></td>
+                  <td>Dec 14,2018</td>
+                  <td>
+                    <a class="btn btn-default" href="edit.html" target="_blank"
+                      >Edit</a
+                    >
+                    <a class="btn btn-danger" href="#">Delete</a>
+                  </td>
+                </tr>
+              </table>
+            </div>
+
+            <br />
+            <!-- Website overview -->
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer id="main-footer">
+      <p>Copyright Adminstrap &copy; 2019</p>
+    </footer>
+    <!--MOdals-->
+
+    <!--Add pages-->
+    <div
+      class="modal fade"
+      id="addPage"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="MyModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <form>
+            <div class="modal-header">
+              <h5 class="modal-title" id="MyModalLabel">Add Page</h5>
+              <button
+                type="button"
+                class="close"
+                data-dismiss="modal"
+                aria-label="Close"
+              >
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <div class="form-group">
+                <label>Page Title></label>
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="Page Title"
+                />
+              </div>
+              <div class="form-group">
+                <label>Page Body</label>
+                <textarea
+                  name="editor1"
+                  class="form-control"
+                  placeholder="Page Body"
+                ></textarea>
+              </div>
+              <div class="checkbox">
+                <label> <input type="checkbox" /> Published </label>
+              </div>
+              <div class="form-group">
+                <label>Meta tags</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="Add Some Tags..."
+                />
+              </div>
+              <div class="form-group">
+                <label>Meta description</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="Add Meta
+                Description..."
+                />
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button
+                type="button"
+                class="btn btn-secondary"
+                data-dismiss="modal"
+              >
+                Close
+              </button>
+              <button type="submit" class="btn btn-primary">
+                Save changes
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- /.container -->
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script>
+      CKEDITOR.replace("editor1");
+    </script>
+  </body>
+</html>
